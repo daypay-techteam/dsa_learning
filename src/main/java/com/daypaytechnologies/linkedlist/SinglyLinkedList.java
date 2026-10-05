@@ -1,16 +1,22 @@
 package com.daypaytechnologies.linkedlist;
 
 public class SinglyLinkedList {
-    private Node head;
+    protected Node head;
     private Node tail;
     private int length;
 
-    private static class Node {
+    protected static class Node {
         int value;
         Node next;
         Node(int value) {
             this.value = value;
         }
+    }
+
+    public SinglyLinkedList() {
+        head = null;
+        tail = null;
+        length = 0;
     }
 
     public SinglyLinkedList(int value) {
