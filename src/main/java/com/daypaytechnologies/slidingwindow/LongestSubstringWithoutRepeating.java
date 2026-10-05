@@ -28,6 +28,7 @@ public class LongestSubstringWithoutRepeating {
     }
 
     public static void computeThroughArray(String arg) {
+        // two pointer approach
         int[] lastSeen = new int[256];
         Arrays.fill(lastSeen, -1); // important otherwise last seen index get lost
         int windowStart = 0;
@@ -49,8 +50,8 @@ public class LongestSubstringWithoutRepeating {
     }
 
     public static void main(String[] args) {
-        String a = "abcabcdef";
-        computeThroughMap(a);
+        String a = "abcabcdef"; //output: abcdef
+        //computeThroughMap(a);
         computeThroughArray(a);
     }
 }
